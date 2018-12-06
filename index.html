@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width , initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <title>WEBZONE</title>
+</head>
+<body>
+
+ <video autoplay muted loop id="myVideo">
+  <source src="video/rain.mp4" type="video/mp4">
+</video>
+
+<div class="content">
+  <h1>Heading</h1>
+  <p>Lorem ipsum...</p>
+
+  <button id="myBtn" onclick="stop()">Pause</button>
+    <button id="myBtn2" onclick="resume()">Resume</button>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	
+	<script>
+	function stop(){
+    $('#myBtn').on('click', function(){
+        $('#myVideo').get(0).pause();
+    })
+	};
+	
+	function resume(){
+    $('#myBtn2').on('click', function(){
+        $('#myVideo').get(0).play();
+    })
+	};
+	</script>
+</body>
+</html>
